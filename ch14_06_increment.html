@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button {
+            font-size: 20px;
+            width: 40px;
+            border: 10px;
+            height: 40px;
+        }
+        input {
+            height: 60px;
+            width: 60px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="modifyNbr('d')">-</button>
+    <input id="theNbr" type="text" value="0" readonly>
+    <button onclick="modifyNbr('i')">+</button>
+
+    <script>
+        nbr=0;
+        function modifyNbr(action) {
+
+            if (action == "i") {
+                nbr++;
+            } else {
+                nbr--;
+            }
+           
+            document.getElementById("theNbr").value = nbr;
+
+            // change the color, style, size
+            if (nbr%2 == 0) {
+                theNbr.style.color = "red";
+            } else {
+                theNbr.style.color = "black";
+            }
+            if (nbr%3 == 0) {
+                theNbr.style.fontStyle = "italic";
+            } else {
+                theNbr.style.fontStyle = "normal";   
+            }
+            if (nbr%7 == 0) {
+                theNbr.style.fontSize = "2.5em";
+            } else {
+                theNbr.style.fontSize = "1.5em";
+            }    
+            
+
+        }
+    </script>
+</body>
+</html>
